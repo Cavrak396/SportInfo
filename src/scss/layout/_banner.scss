@@ -1,0 +1,85 @@
+.banner {
+  position: relative;
+
+  @include background;
+
+  @include after {
+    @include darker;
+    background-color: $black;
+    opacity: 0.7;
+    z-index: 1;
+  }
+}
+
+.banner__text {
+  position: relative;
+  text-align: center;
+  z-index: 5;
+  padding: 290px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include phone {
+    padding: 255px 0 180px 0;
+  }
+}
+
+.banner__text-lines,
+.banner__text-tittle {
+  color: $white;
+}
+
+.banner__text-tittle {
+  font-size: 70px;
+  font-weight: $ultra_bold;
+  margin-bottom: 20px;
+
+  @include phone {
+    font-size: 50px;
+  }
+}
+
+.banner__text-lines {
+  font-size: 18px;
+  line-height: 27px;
+
+  @include phone {
+    font-size: 15px;
+    line-height: 23px;
+  }
+}
+
+.page-sticky-link {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px $yellow;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  left: 20px;
+  bottom: 20px;
+  z-index: 25;
+  color: $white;
+  text-decoration: none;
+  background-color: $gray;
+  font-size: 15px;
+
+  @include hover {
+    transition: $normal;
+    transform: scale(1.1);
+    color: $yellow;
+  }
+
+  @include small_tablet {
+    left: 95%;
+    transform: translateX(-95%);
+  }
+
+  @include phone {
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,182 @@
+.footer {
+  background-color: $black;
+  padding: 10px 0;
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
+  @include phone {
+    padding: 40px 0 80px 0;
+  }
+}
+
+.footer__line {
+  display: flex;
+  padding: 70px 0;
+
+  @include tablet {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+}
+
+.footer__container {
+  max-width: 33.33%;
+  flex: 1 1 33.33%;
+
+  @include tablet {
+    max-width: 100%;
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 35px;
+  }
+
+  @include phone {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__logo-link {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 20px;
+
+  @include hover {
+    opacity: 0.7;
+    transition: $normal;
+  }
+}
+
+.footer__logo {
+  color: $white;
+  font-size: 30px;
+  font-weight: $bold;
+}
+
+.footer__text,
+.footer__navigation-link {
+  opacity: 0.6;
+}
+
+.footer__text {
+  color: $white;
+  font-size: 15px;
+  line-height: 22px;
+  max-width: 400px;
+  margin-bottom: 25px;
+
+  @include tablet {
+    margin: 0 auto 25px auto;
+  }
+}
+
+.footer__instructions {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+
+  @include tablet {
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.footer__navigation-title,
+.footer__contact-title,
+.footer__opening-title {
+  display: block;
+  color: $white;
+  font-size: 18px;
+  font-weight: $semi;
+  margin-bottom: 15px;
+}
+
+.footer__contact-link,
+.footer__opening-item {
+  display: block;
+  color: $white;
+  margin-bottom: 15px;
+  opacity: 0.6;
+}
+
+.footer__navigation {
+  @include tablet {
+    margin-bottom: 35px;
+  }
+}
+
+.footer__navigation-item {
+  margin-bottom: 12px;
+  list-style: square;
+  color: $yellow;
+
+  @include tablet {
+    list-style: none;
+  }
+}
+
+.footer__navigation-link {
+  color: $white;
+  text-decoration: none;
+  display: inline-block;
+
+  @include after {
+    @include underline_start;
+  }
+
+  @include hover {
+    color: $yellow;
+    transition: $normal;
+
+    @include after {
+      @include underline_finish;
+    }
+  }
+}
+
+.footer__navigation-link--contact {
+  color: $yellow;
+}
+
+.footer__contact-item {
+  margin-bottom: 15px;
+}
+
+.footer__contact-link {
+  text-decoration: none;
+
+  @include after {
+    @include underline_start;
+  }
+
+  @include hover {
+    color: $yellow;
+    transition: $normal;
+
+    @include after {
+      @include underline_finish;
+    }
+  }
+}
+
+.footer__opening-hours {
+  max-width: 300px;
+  margin-left: auto;
+
+  @include tablet {
+    margin: 0 auto;
+  }
+}
+
+.footer__copyright-holder {
+  text-align: center;
+}
+
+.footer__copyright {
+  color: $white;
+  font-size: 15px;
+  opacity: 0.6;
+}

@@ -1,0 +1,83 @@
+button {
+  background: none;
+  border: none;
+}
+
+.footer__contact-btn {
+  display: inline-block;
+  color: $white;
+  background-color: $deep_yellow;
+  border-radius: 20px;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-weight: $semi;
+
+  @include hover {
+    transition: $normal;
+    background-color: $white;
+    color: $deep_yellow;
+  }
+}
+
+.header__hamburger-bar {
+  display: block;
+  background-color: $white;
+  height: 3px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+
+  &:nth-child(1) {
+    width: 12px;
+  }
+
+  &:nth-child(2) {
+    width: 25px;
+  }
+
+  &:nth-child(3) {
+    width: 15px;
+    margin-left: auto;
+  }
+}
+
+.navigation__hamburger-close {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  @include phone {
+    display: block;
+  }
+}
+
+.navigation__hamburger-closebar {
+  display: block;
+  background-color: $white;
+  height: 4px;
+  width: 20px;
+  margin-bottom: 2px;
+
+  &:nth-child(1) {
+    transform: translateY(13px) translateX(-4px) rotate(-45deg);
+  }
+
+  &:nth-child(2) {
+    transform: translateY(7px) translateX(-3px) rotate(45deg);
+  }
+}
+
+.news__button {
+  font-size: 17px;
+  color: $gray;
+  cursor: pointer;
+
+  @include hover {
+    transition: $normal;
+    opacity: 0.7;
+  }
+
+  @include phone {
+    font-style: 15px;
+  }
+}

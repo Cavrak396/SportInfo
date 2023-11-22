@@ -1,0 +1,89 @@
+@mixin tablet {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin small_tablet {
+  @media screen and (max-width: 975px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin after {
+  &::after {
+    @content;
+  }
+}
+
+@mixin before {
+  &::before {
+    @content;
+  }
+}
+
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+
+@mixin darker {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+@mixin underline_start {
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: $yellow;
+  display: block;
+  transition: $normal;
+}
+
+@mixin underline_finish {
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: $yellow;
+  display: block;
+  transition: $normal;
+}
+
+@mixin undertitle {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+@mixin underjoin {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 1px;
+  background-color: $yellow;
+}

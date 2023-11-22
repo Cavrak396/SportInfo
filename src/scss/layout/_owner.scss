@@ -1,0 +1,94 @@
+.owner {
+  padding: 40px 0;
+}
+
+.owner__line {
+  display: flex;
+  align-items: center;
+
+  @include small_tablet {
+    flex-direction: column;
+  }
+}
+
+.owner__container {
+  max-width: 50%;
+  flex: 1 1 50%;
+  color: $white;
+
+  @include small_tablet {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  @include phone {
+    margin-bottom: 25px;
+  }
+}
+
+.owner__container-tittle,
+.owner__container-lines,
+.owner__journalist-information,
+.owner__container-author {
+  color: $white;
+  opacity: 0.6;
+}
+
+.owner__container-tittle {
+  margin-bottom: 20px;
+}
+
+.owner__container-lines {
+  font-size: 18px;
+  font-style: $italic;
+  line-height: 30px;
+  max-width: 574px;
+  margin-bottom: 20px;
+
+  @include phone {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
+.owner__container-author {
+  font-style: $italic;
+  font-size: 17px;
+}
+
+.owner__journalist-link {
+  display: block;
+  max-width: 650px;
+  max-height: 650px;
+  text-decoration: none;
+
+  @include hover {
+    opacity: 0.7;
+    transition: $normal;
+  }
+}
+
+.owner__journalist-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.owner__journalist-information {
+  max-width: 160px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.owner__journalist-name,
+.owner__journalist-job {
+  display: block;
+}
+
+.owner__journalist-name {
+  margin-bottom: 4px;
+}
+
+.owner__journalist-job {
+  font-style: $italic;
+  font-size: 12px;
+}

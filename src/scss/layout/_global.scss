@@ -1,0 +1,164 @@
+.global {
+  position: relative;
+  min-height: 770px;
+  padding-bottom: 200px;
+  z-index: 10;
+
+  @include background;
+
+  @include after {
+    @include darker;
+    background-color: $black;
+    opacity: 0.4;
+  }
+
+  @include phone {
+    padding-bottom: 55px;
+  }
+}
+
+.global__container {
+  position: relative;
+  text-align: center;
+  min-height: 770px;
+  z-index: 20;
+}
+
+.global__join-text {
+  position: relative;
+  padding: 55px 0 15px 0;
+  text-align: center;
+  color: $white;
+  margin-bottom: 100px;
+  z-index: 20;
+
+  @include after {
+    @include underjoin;
+  }
+
+  @include phone {
+    margin-bottom: 20px;
+  }
+}
+
+.global__join-title {
+  margin-bottom: 11px;
+  opacity: 0.7;
+}
+
+.global__join-undertitle {
+  @include undertitle;
+}
+
+.global__planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 380px;
+  max-height: 380px;
+  z-index: 1;
+
+  @include phone {
+    position: static;
+    transform: translate(0, 0);
+    max-width: 260px;
+    max-height: 260px;
+  }
+}
+
+.global__news-item {
+  position: absolute;
+  max-width: 360px;
+  border-radius: 10px;
+  z-index: 10;
+
+  @include phone {
+    max-width: 400px;
+    position: static;
+    margin: 0 auto 15px auto;
+  }
+}
+
+.global__news-item--leftup,
+.global__news-item--leftdown {
+  left: 0;
+}
+
+.global__news-item--rightup,
+.global__news-item--rightdown {
+  right: 0;
+}
+
+.global__news-item--leftup,
+.global__news-item--rightup {
+  top: 0;
+}
+
+.global__news-item--leftdown,
+.global__news-item--rightdown {
+  bottom: 0;
+}
+
+.global__news-source {
+  display: inline-block;
+  text-decoration: none;
+
+  @include hover {
+    opacity: 0.6;
+    transition: $normal;
+  }
+}
+
+.global__news-top {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  min-height: 140px;
+  border-radius: 15px 15px 0 0;
+
+  @include background;
+
+  @include hover {
+    opacity: 0.6;
+    transition: $normal;
+  }
+}
+
+.global__news-author {
+  position: absolute;
+  padding: 2px;
+  font-size: 12px;
+  color: $white;
+  background-color: $gray_transparent;
+  bottom: 0;
+  right: 0;
+}
+
+.global__news-bottom {
+  background-color: $black_transparent;
+  padding: 15px;
+  border-radius: 0 0 15px 15px;
+}
+
+.global__news-tlink {
+  text-decoration: none;
+  color: $white;
+  line-height: 18px;
+
+  @include hover {
+    color: $yellow;
+    transition: $normal;
+  }
+}
+
+.global__news-title {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.global__news-srcname {
+  color: $white;
+  opacity: 0.4;
+  font-size: 12px;
+}

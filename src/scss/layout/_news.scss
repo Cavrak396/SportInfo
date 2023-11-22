@@ -1,0 +1,153 @@
+.news__line {
+  display: flex;
+
+  @include phone {
+    flex-direction: column;
+  }
+}
+
+.news__promotion {
+  padding: 20px 0;
+  max-width: 15%;
+  flex: 1 1 15%;
+  background-color: $black;
+
+  @include phone {
+    max-width: 100%;
+    flex: 1 1 100%;
+    min-height: 100px;
+  }
+}
+
+.news__content {
+  max-width: 70%;
+  flex: 1 1 70%;
+  background-color: $white;
+  padding: 30px 20px;
+
+  @include small_tablet {
+    padding: 30px 0;
+  }
+
+  @include phone {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.news__title {
+  display: none;
+}
+
+.news__item {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  background-color: $white;
+  color: $black;
+  overflow: hidden;
+  padding-bottom: 15px;
+
+  @include after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 300px;
+    background-color: $black;
+  }
+
+  @include phone {
+    padding-bottom: 8px;
+  }
+}
+
+.news__item-posters {
+  display: flex;
+  cursor: grab;
+}
+
+.news__presentation {
+  padding-top: 13px;
+}
+
+.news__item-source {
+  display: inline-block;
+  color: $gray;
+  margin-bottom: 20px;
+  line-height: 15px;
+
+  @include hover {
+    transition: $normal;
+    opacity: 0.7;
+  }
+
+  @include phone {
+    font-size: 13px;
+  }
+}
+
+.news__poster-item {
+  min-width: 30%;
+  flex: 1 1 30%;
+  min-height: 300px;
+
+  @include background;
+
+  @include tablet {
+    min-height: 200px;
+  }
+
+  @include small_tablet {
+    min-width: 40%;
+    flex: 1 1 40%;
+  }
+}
+
+.news__item-text {
+  padding: 20px 10px;
+  overflow: hidden;
+
+  @include phone {
+    padding: 10px 5px;
+  }
+}
+
+.height-limiter {
+  display: none;
+}
+
+.height-unlimited {
+  display: block;
+}
+
+.news__item-title {
+  display: block;
+  font-size: 40px;
+  font-weight: $bold;
+  margin-bottom: 25px;
+  line-height: 40px;
+
+  @include phone {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+.news__item-lines {
+  margin-bottom: 20px;
+  line-height: 22px;
+
+  @include phone {
+    font-size: 14px;
+  }
+}
+
+.news__button-holder {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
